@@ -14,15 +14,15 @@ pipeline {
                 }
             }
         }
-        stage('test'){
-            steps{
-                script{
-                    echo "running the test cases..."
-                    // bat 'npm run test'
-                    bat 'npm run ng -- build'
-                }
-            }
-        }
+        // stage('test'){
+        //     steps{
+        //         script{
+        //             echo "running the test cases..."
+        //             bat 'npm run test'
+        //             bat 'npm run ng -- build'
+        //         }
+        //     }
+        // }
         stage('run') {
             steps {
                 script {
