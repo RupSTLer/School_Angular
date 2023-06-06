@@ -1,0 +1,66 @@
+{
+  "name": "school-management-system",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/cdk": "^15.2.3",
+    "@angular/common": "^15.1.0",
+    "@angular/compiler": "^15.1.0",
+    "@angular/core": "^15.1.0",
+    "@angular/forms": "^15.1.0",
+    "@angular/material": "^15.2.3",
+    "@angular/platform-browser": "^15.1.0",
+    "@angular/platform-browser-dynamic": "^15.1.0",
+    "@angular/router": "^15.1.0",
+    "@fortawesome/angular-fontawesome": "^0.12.1",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@ng-idle/core": "^11.1.0",
+    "@ng-idle/keepalive": "^11.0.3",
+    "@types/jest": "^29.5.1",
+    "angular-calendar": "^0.31.0",
+    "bn-ng-idle": "^2.0.5",
+    "bootstrap": "^5.2.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.4",
+    "ngx-toastr": "^16.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.1.0",
+    "@angular/cli": "~15.1.0",
+    "@angular/compiler-cli": "^15.1.0",
+    "jest": "^29.5.0",
+    "jest-preset-angular": "^13.0.1",
+    "typescript": "~4.9.4"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setup.jest.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/",
+      "<rootDir>/cypress/",
+      "<rootDir>/src/test.ts"
+    ],
+    "transform": {
+      "^.+\\.{ts|tsx}?$": ["ts-jest", {
+        "babel": true,
+        "tsConfig": "tsconfig.json"
+      }]
+    }
+  }
+}

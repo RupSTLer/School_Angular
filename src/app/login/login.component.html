@@ -1,0 +1,109 @@
+<body>
+    <div class="loginBox">
+        <!-- <img class="user" src="../../assets/images/student1.png"> -->
+        <h2>Log In</h2>
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <!-- <form [formGroup]="loginForm" (ngSubmit)="login()"> -->
+            <input ngModel type="text" name="userName" placeholder="username" required>
+            <!-- <p *ngIf="userName && userName.touched && userName.invalid"  style="color: red;">Please add a valid username</p> -->
+            <div class="inputsss">
+                <input ngModel type="password" name="userPassword" placeholder="password" required
+                    [type]="hide ? 'password' : 'text'" value="enter username" #message>
+                <button class="btnn" mat-icon-button matSuffix (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" style="color: white; display: flex;">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </div>
+            <div class="form-inline">
+                <a id="forget" class="font-weight-bold">forget password?</a>
+            </div>
+            <input type="submit" name="sign-in" value="Sign In" [disabled]="!loginForm.valid">
+            <!-- <a href="#">Forget Password</a> -->
+            <div class="text-center text-white pt-2">Don't have account?<a id="forget" (click)="registerUser()"> register here</a></div>
+        </form>
+
+        <!-- <div class="mx-3 my-2 py-2 bordert">
+            <div class="text-center py-3">
+                <a href="http://www.facebook.com" target="_blank" class="px-2"><img src="https://www.dpreview.com/files/p/articles/4698742202/facebook.jpeg" alt=""></a>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+
+
+<!-- formControlName="userName"      -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card" style="padding: 20px;">
+                <div class="card-header">
+                    <font [size]="+6" style="align-items: center;">Login Form</font>
+                </div>
+                <div class="card-body">
+                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                        <div class="">
+                            <div class="text-center">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>UserName</mat-label>
+                                    <input matInput ngModel name="userName" id="userName" placeholder="username">
+                                </mat-form-field>
+                            </div>
+            
+                            <div class="text-center">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>UserPassword</mat-label>
+                                    <input matInput ngModel name="userPassword" id="userPassword" placeholder="userpassword"
+                                        required [type]="hide ? 'password' : 'text'" value="enter username" #message>
+                                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                        [attr.aria-pressed]="hide">
+                                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </button>
+                                </mat-form-field>
+                            </div>
+            
+                            <div class="text-center">
+                                <button class="w-20 text-center" type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+                            </div>
+
+                            <div class="text-center">
+                                <br>
+                                <button class="w-20" mat-raised-button type="button" (click)="registerUser()">Create an account</button>
+                            </div>
+            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <input type="text" ngModel name="userName" id="userName" placeholder="Enter your username"
+                class="form-control mb-3">  
+            <input type="password" ngModel name="userPassword" id="userPassword" placeholder="Enter your password"
+                class="form-control mb-3">
+            <input type="submit" value="Login" class="btn btn-outline-primary rounded-0 form-control"> -->
+
+<!-- mb = margin buttom -->

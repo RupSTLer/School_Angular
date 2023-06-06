@@ -1,0 +1,16 @@
+<app-header username={{username}}></app-header>
+<router-outlet (activate)="setUserName()"></router-outlet>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+<!-- <p><strong>{{idleState}}</strong></p>
+<p *ngIf="lastPing"><small>Last keepalive ping <strong>{{lastPing}}</strong></small></p>
+<button (click)="reset()" *ngIf="timedOut">Restart</button> -->

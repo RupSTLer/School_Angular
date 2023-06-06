@@ -1,0 +1,171 @@
+mat-toolbar {
+    background: #004a9f;
+    color: white;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #002b5c;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.content {
+    height: calc(95vh - 130px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    padding: 16px;
+
+    overflow: auto;
+}
+
+mat-sidenav-container {
+    height: calc(90vh - 65px);
+    text-align: center;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+
+}
+
+mat-icon {
+    margin-right: 8px;
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+    font-size:larger;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+    font-size: large;
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+/* /////////////////// */
+
+/* card styling */
+
+a:link {
+    text-decoration: none;
+  }
+
+  .order-card {
+    color: #fff;
+  }
+
+  .bg-c-blue {
+    background: linear-gradient(45deg, #4099ff, #73b4ff);
+  }
+
+  .bg-c-green {
+    background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+  }
+
+  .bg-c-yellow {
+    background: linear-gradient(45deg, #FFB64D, #ffcb80);
+  }
+
+  .bg-c-pink {
+    background: linear-gradient(45deg, #FF5370, #ff869a);
+  }
+
+
+  .card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .card .card-block {
+    padding: 25px;
+  }
+
+  .order-card i {
+    font-size: 26px;
+  }
+
+  .f-left {
+    float: left;
+  }
+
+  .f-right {
+    float: right;
+  }
+
+  .abc h2 {
+    display: flex;
+  }
+
+
+
+/* /////////////// */
+
+
+/* main{
+  padding-left: 240px;
+}
+
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
+
+#credits li,
+#credits li a {
+  color: white;
+}
+
+#credits li a {
+  font-weight: bold;
+}
+
+
+.fab-tip {
+  position: fixed;
+  right: 85px;
+  padding: 0px 0.5rem;
+  text-align: right;
+  background-color: #323232;
+  border-radius: 2px;
+  color: #FFF;
+  width: auto;
+} */

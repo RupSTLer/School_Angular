@@ -1,0 +1,151 @@
+<div class="text-center">
+    <h1>All Leaves List</h1>
+</div>
+
+<div class="container mt-4 mb-4">
+
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="leaves">
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <!-- StudentID Column -->
+            <ng-container matColumnDef="studentId">
+                <th mat-header-cell *matHeaderCellDef> Student-ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.studentId}} </td>
+            </ng-container>
+
+            <!-- startDate Column -->
+            <ng-container matColumnDef="startDate">
+                <th mat-header-cell *matHeaderCellDef> startDate </th>
+                <td mat-cell *matCellDef="let element"> {{element.startDate}} </td>
+            </ng-container>
+
+            <!-- endDate Column -->
+            <ng-container matColumnDef="endDate">
+                <th mat-header-cell *matHeaderCellDef> endDate </th>
+                <td mat-cell *matCellDef="let element"> {{element.endDate}} </td>
+            </ng-container>
+
+            <!-- reason Column -->
+            <ng-container matColumnDef="reason">
+                <th mat-header-cell *matHeaderCellDef> reason </th>
+                <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+            </ng-container>
+
+            <!-- time Column -->
+            <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef> Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+            </ng-container>
+
+            <!-- status Column -->
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+
+            <!-- Approve button -->
+            <ng-container matColumnDef="approve">
+                <th mat-header-cell *matHeaderCellDef> Approve </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button color="primary" (click)="approve(element.id)">
+                        <mat-icon>thumb_up</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <!-- reject button -->
+            <ng-container matColumnDef="reject">
+                <th mat-header-cell *matHeaderCellDef> Reject </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button color="warn" (click)="reject(element.id)">
+                        <mat-icon>thumb_down</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+        </mat-paginator> -->
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+
+    <br>
+    <h2> Teacher List </h2>
+    <table class="table table-stripped">
+        <thead>
+           <tr>
+            <th> ID </th>
+            <th> UserName </th>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Actions </th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let teacher of teachers">
+                <td> {{teacher.id}} </td>
+                <td> {{teacher.userName}} </td>
+                <td> {{teacher.name}} </td>
+                <td> {{teacher.email}} </td>
+                <td> -->
+<!-- <button routerLink="/updateEmployee/{{employee.id}}" class="btn btn-info">Update</button> -->
+<!-- <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button> -->
+<!---         <button routerLink="/updateTeacher/{{teacher.id}}" style="max-height: 40px; max-width: 50px;" class="btn btn-primary" aria-label="Example icon button with a edit icon"><mat-icon>edit</mat-icon></button>
+                    <button (click)="deleteTeacher(teacher.id)" style="margin-left:10px; max-height: 40px; max-width: 50px;" class="btn btn-danger" aria-label="Example icon button with a delete icon"><mat-icon>delete</mat-icon></button>
+                    <button (click)="teacherDetails(teacher.id)" style="margin-left:10px; max-height: 40px; max-width: 50px;" class="btn btn-dark" aria-label="Example icon button with a visibility icon"><mat-icon>visibility</mat-icon></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
+    
+    
+     -->

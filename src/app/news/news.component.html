@@ -1,0 +1,21 @@
+<div class="container mat-elevation-z8 mt-5 mb-5">
+
+    <br>
+    <h2> News List </h2>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th> Title </th>
+                <th> Body </th>
+                <th> Date </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let n of news">
+                <td> {{n.title}} </td>
+                <td> {{n.body}} </td>
+                <td> {{n.date}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

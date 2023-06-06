@@ -1,0 +1,43 @@
+<mat-card>
+    <h1 class="text-center">Profile Details</h1>
+    <mat-card-content>
+        <div class="bootstrap">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="../../../assets/images/admin.png" alt="" class="profile-img">
+                    <h1 class="mt-20">{{this.name}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+
+                        <!-- table details -->
+                        <table>
+                            <tr>
+                                <td>Username:</td>
+                                <td>{{username}}</td>
+                            </tr>
+                            <tr>
+                                <td>ID:</td>
+                                <td>{{id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Name:</td>
+                                <td>{{name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>{{email}}</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <div class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button class="ml-10" mat-raised-button color="accent">Delete</button>
+    </div>
+</mat-card>

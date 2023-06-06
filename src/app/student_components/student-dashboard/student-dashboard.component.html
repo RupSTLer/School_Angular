@@ -1,0 +1,170 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  STUDENT DASHBOARD
+</mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+      <div *ngIf="this.gender == 'Male'">
+        <img  class="avatar mat-elevation-z8" src="../../../assets/images/student1.png"/>
+      </div>
+
+      <div *ngIf="this.gender == 'Female'">
+        <img  class="avatar mat-elevation-z8" src="../../../assets/images/student2.png"/>
+      </div>
+
+      <p class="name">{{this.studentName}}</p>
+      <p class="designation">Student</p>
+  
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button text-white" routerLink="/home">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-button class="menu-button text-white" routerLink="/userProfile">
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button text-white" routerLink="/applyLeave">
+        <mat-icon><span class="material-symbols-outlined">
+          next_week
+          </span></mat-icon>
+        <span>Apply Leave</span>
+      </button>
+  
+      <button mat-button class="menu-button text-white" routerLink="/msgTeacher">
+        <mat-icon>message</mat-icon>
+        <span>Send Message</span>
+      </button>
+
+      <button mat-button class="menu-button text-white" routerLink="/payFees">
+        <mat-icon>currency_rupee</mat-icon>
+        <span>Pay Fees</span>
+      </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+  
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-xl-3">
+              <div class="card bg-c-green order-card">
+                <div class="card-block abc">
+                  <h2 class="m-b-20"><mat-icon style="margin-top: 5px;">message</mat-icon><a style="color: white;" routerLink="/myMsgs">My Messages</a></h2>
+                  <!-- <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{countStu}}</span></h2> -->
+                  <!-- <p class="m-b-0">Pending Students<span class="f-right">{{pendingstudentcount}}</span></p> -->
+                  <!-- <p class="m-b-0">Pending Teachers<span class="f-right"></span></p> -->
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 col-xl-3">
+              <div class="card bg-c-green order-card">
+                <div class="card-block abc">
+                  <h2 class="m-b-20"><mat-icon>next_week</mat-icon><a style="color: white;" routerLink="/myLeaves">My Leaves</a></h2>
+                  <!-- <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{countStu}}</span></h2> -->
+                  <!-- <p class="m-b-0">Pending Students<span class="f-right">{{pendingstudentcount}}</span></p> -->
+                  <!-- <p class="m-b-0">Pending Students<span class="f-right"></span></p> -->
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 col-xl-3">
+              <div class="card bg-c-yellow order-card">
+                <div class="card-block abc">
+                  <h2 class="m-b-20"><mat-icon style="margin-top: 4px;">currency_rupee</mat-icon><a style="color: white;" routerLink="/myFees">My Fees</a></h2>
+                  <!-- <h2 class="text-right"><i class="fas fa-search-dollar f-left"></i><span></span></h2> -->
+                  <!-- <p class="m-b-0">Pending Salary<span class="f-right"></span></p> -->
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 col-xl-3">
+              <div class="card bg-c-pink order-card">
+                <div class="card-block abc">
+                  <h2 class="m-b-20"><mat-icon style="margin-top: 4px;">event_note</mat-icon><a style="color: white;" routerLink="/schedule">Schedule</a></h2>
+                  <!-- <h2 class="text-right"><i class="fas fa-eye"></i><span></span></h2> -->
+                  <!-- <p class="m-b-0">Pending Dues<span class="f-right"></span></p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+    
+  
+        <div class="row">
+          <div class="col s6">
+            <div style="padding: 35px;" align="center" class="card">
+              <div class="row">
+                <div class="left card-title">
+                  <b style="font-size:x-large;">View Teachers</b>
+                </div>
+              </div>
+  
+              <div class="row">
+                <!-- <a routerLink="/addTeacher">
+                  <div style="padding: 5px;" class="grey lighten-3 col s5 waves-effect">
+                    <i class="indigo-text text-lighten-1 large material-icons w3-jumbo">person</i>
+                    <span class="indigo-text text-lighten-1">
+                      <h2>Add Teacher</h2>
+                    </span>
+                  </div>
+                </a> -->
+  
+                <a routerLink="/listTeacher">
+                  <div style="padding: 5px;" class="grey lighten-3 col s5 waves-effect">
+                    <i class="indigo-text text-lighten-1 large material-icons w3-jumbo">people</i>
+                    <span class="indigo-text text-lighten-1">
+                      <h2>View Teachers</h2>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col s6">
+            <div style="padding: 35px;" align="center" class="card">
+              <div class="row">
+                <div class="left card-title">
+                  <b style="font-size:x-large;">View Students</b>
+                </div>
+              </div>
+              <div class="col">
+                <!-- <a routerLink="/addStudent">
+                  <div style="padding: 5px;" class="grey lighten-3 col s5 waves-effect">
+                    <i class="indigo-text text-lighten-1 large material-icons w3-jumbo">person</i>
+                    <span class="indigo-text text-lighten-1">
+                      <h2>Add Student</h2>
+                    </span>
+                  </div>
+                </a>
+   -->
+                <a routerLink="/listStudent">
+                  <div style="padding: 5px;" class="grey lighten-3 col s5 waves-effect">
+                    <i class="indigo-text text-lighten-1 large material-icons w3-jumbo">people</i>
+                    <span class="indigo-text text-lighten-1">
+                      <h2>View Students</h2>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  
+  <!-- https://github.com/thisiszoaib/angular-responsive-sidebar/blob/master/src/app/app.component.ts -->

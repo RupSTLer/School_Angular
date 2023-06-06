@@ -1,0 +1,74 @@
+body{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+}
+
+.container-fluid{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    justify-content: center;
+    
+}
+
+
+.bg-img {
+    /* background: url("https://firebasestorage.googleapis.com/v0/b/fir-flutter-99d26.appspot.com/o/school.png?alt=media&token=aef27400-e5df-42d6-89b6-42d9e272078e");
+     */
+    /* background: url(../../assets/images/school.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.headline {
+    position:absolute;
+    top:60px;
+    width: 100%;
+}
+
+.jumbotron {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* background-image: url(../../assets/images/school.png); */
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.jumbotron h1 {
+    text-align: center;
+}
+
+
+
+
+
+/* card slider */
+
+.card {
+    width: 70%;
+    height: 70%;
+}
+
+
+
+.glow {
+    /* font-size: 80px; */
+    color: black;
+    /* text-align: center; */
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+

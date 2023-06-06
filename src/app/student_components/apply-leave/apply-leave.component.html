@@ -1,0 +1,46 @@
+<div class="container w3-pale-green mat-elevation-z8 mt-5 mb-5" style="padding: 30px; border-radius: 10px; width: 50%;">
+  <h1>Apply Leave</h1>
+  <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="studentId">Student-ID</label>
+      <input [(ngModel)]="leave.studentId" type="text" class="form-control" id="studentId" formControlName="studentId"
+        required readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="studentName">StudentName</label>
+      <input [(ngModel)]="leave.studentName" type="text" class="form-control" id="studentName" formControlName="studentName"
+        required readonly>
+    </div>
+    <!-- <p *ngIf="studentId && studentId.touched && studentId.invalid"  style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid ID</p> -->
+    <!-- <p *ngIf="leaveForm.controls['studentId'].invalid && (leaveForm.controls['studentId'].dirty || leaveForm.controls['studentId'].touched)"
+      style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid ID</p> -->
+
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input [(ngModel)]="leave.startDate" type="date" class="form-control" id="startDate" formControlName="startDate"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="endDate">End Date</label>
+      <input [(ngModel)]="leave.endDate" type="date" class="form-control" id="endDate" formControlName="endDate"
+        required>
+    </div>
+    <!-- <p *ngIf="leaveForm && leaveForm.touched && leaveForm.invalid"  style="color: red;">Please add a valid date range</p> -->
+
+    <div class="form-group">
+      <label for="reason">Reason</label>
+      <textarea [(ngModel)]="leave.reason" class="form-control" id="reason" [ngModelOptions]="{standalone: true}"
+        [maxlength]="maxChars">
+              required></textarea>
+      <label *ngIf="leave.reason.length > 60" class="nopadding clrlbl">Characters Remaining:
+        {{leave.reason.length}}/{{maxChars}}</label>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+  </form>
+</div>
+
+
+<!--    [disabled]="leaveForm.invalid"-->

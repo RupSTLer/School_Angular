@@ -1,0 +1,49 @@
+<div class="container w3-teal mat-elevation-z8 mt-5 mb-5" style="padding: 30px; border-radius: 10px; width: 50%;">
+  <h1>Pay Fees Form</h1>
+  <form [formGroup]="payFeesForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="studentId">Student ID:</label>
+      <input [(ngModel)]="fee.studentId" type="text" class="form-control w-70" formControlName="studentId" required readonly>
+    </div>
+    <!-- <p *ngIf="studentId && studentId.touched && studentId.invalid"  style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid ID</p> -->
+
+    <div class="form-group">
+      <label for="studentName">Student Name:</label>
+      <input [(ngModel)]="fee.studentName" type="text" class="form-control w-70" formControlName="studentName" required readonly>
+    </div>
+    <!-- <p *ngIf="studentName && studentName.touched && studentName.invalid"  style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid name</p> -->
+
+    <div class="form-group">
+      <label for="feeType">Fee Paid for:</label>
+      <select [(ngModel)]="fee.feeType" (ngModelChange)="fillAmount()" class="form-control w-70" formControlName="feeType" required>
+        <option value="">--Select Fee Type--</option>
+        <option value="Monthly">Monthly</option>
+        <option value="Quarterly">Quarterly</option>
+        <option value="Yearly">Yearly</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="feesAmount">Fees Amount:</label>
+      <input [(ngModel)]="fee.amount" type="number" class="form-control w-70" formControlName="amount" required readonly>
+    </div>
+    <!-- <p *ngIf="amount && amount.touched && amount.invalid" style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid amount</p> -->
+
+    <div class="form-group">
+      <label for="paymentMethod">Payment Method:</label>
+      <select [(ngModel)]="fee.paymentType" class="form-control w-70" formControlName="paymentType" required>
+        <option value="">--Select Payment Method--</option>
+        <option value="Cash">Cash</option>
+        <option value="Cheque">Cheque</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="Debit Card">Debit Card</option>
+      </select>
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- [disabled]="payFeesForm.invalid" -->

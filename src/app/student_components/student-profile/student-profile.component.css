@@ -1,0 +1,17 @@
+.header-margin{
+    margin-top: 70px;
+}
+.row-display{
+    display: flex;
+}
+.card-button{
+    min-height: 150px;
+}
+form{
+    width: 100%;
+}
+
+.main{
+    height: 85vh;
+    background-size: cover;
+}

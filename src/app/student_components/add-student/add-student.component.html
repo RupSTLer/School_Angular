@@ -1,0 +1,266 @@
+<body>
+    <div class="container">
+        <h2 class="form-title">Add New Student</h2>
+        <form [formGroup]="addForm" (ngSubmit)="addStudent()">
+            <div class="main-user-info">
+
+                <div class="user-input-box">
+                    <label for="userName">Username<i class="fa fa-eye"></i></label>
+                    <input type="text" name="userName" id="userName" class="form-control" [(ngModel)]="student.userName"
+                        placeholder="Enter username" formControlName="userName">
+                    <label *ngIf="userName && userName.touched && userName.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid userName</label>
+                </div>
+
+                <div class="user-input-box">
+                    <label for="password">Password</label>
+                    <input [type]="hide ? 'password' : 'text'" name="password" id="password" class="form-control"
+                        [(ngModel)]="student.password" placeholder="Enter password" formControlName="password">
+                    <!-- <span class="eyeicon" (click)="viewPass()"><i class="fa"
+                            [ngClass]="visible?'fas fa-eye':'fas fa-eye-slash'"></i></span> -->
+                    <!-- <button class="eyeicon" mat-icon-button (click)="viewPass()"><mat-icon>{{visible ? 'visibility_off' : 'visibility'}}</mat-icon></button> -->
+                    <!-- <button class="btnn" mat-icon-button matSuffix (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" style="color: white; display: flex;">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button> -->
+                    <label *ngIf="password && password.touched && password.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid password</label>
+                </div>
+
+                <div class="user-input-box">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" [(ngModel)]="student.name"
+                        placeholder="Enter name" formControlName="name">
+                    <label *ngIf="name && name.touched && name.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid name</label>
+                </div>
+
+                <div class="user-input-box">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" class="form-control" [(ngModel)]="student.age"
+                        placeholder="Enter age" formControlName="age">
+                    <label *ngIf="age && age.touched && age.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid age</label>
+                </div>
+
+                <div class="user-input-box">
+                    <label for="birthDate">BirthDate</label>
+                    <input type="date" name="birthDate" id="birthDate" class="form-control"
+                        [(ngModel)]="student.birthDate" placeholder="Enter birthDate" formControlName="birthDate">
+                    <label *ngIf="birthDate && birthDate.touched && birthDate.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid birthDate</label>
+                </div>
+
+                <div class="user-input-box">
+                    <label for="gender">Gender</label>
+                    <select type="text" name="gender" id="gender" class="form-control" [(ngModel)]="student.gender"
+                        placeholder="Enter gender" formControlName="gender" style="color: black;">
+                        <option [defaultSelected]="false">--Select Gender--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <label *ngIf="gender && gender.touched && gender.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid gender</label>
+
+                </div>
+
+                <div class="user-input-box">
+                    <label for="address">Full address</label>
+                    <input type="text" name="address" id="address" class="form-control" [(ngModel)]="student.address"
+                        placeholder="Enter address" formControlName="address">
+                    <label *ngIf="address && address.touched && address.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid address</label>
+
+                </div>
+
+                <div class="user-input-box">
+                    <label for="phoneNo">PhoneNo</label>
+                    <input type="text" name="phoneNo" id="phoneNo" class="form-control" [(ngModel)]="student.phoneNo"
+                        placeholder="Enter phoneNo" formControlName="phoneNo">
+                    <label *ngIf="phoneNo && phoneNo.touched && phoneNo.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid phoneNo</label>
+
+                </div>
+
+                <div class="user-input-box">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" [(ngModel)]="student.email"
+                        placeholder="Enter email" formControlName="email">
+                    <label *ngIf="email && email.touched && email.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid email</label>
+
+                </div>
+
+                <div class="user-input-box">
+                    <label for="classe">Class</label>
+                    <input type="text" name="classe" id="classe" class="form-control" [(ngModel)]="student.classe"
+                        placeholder="Enter class" formControlName="classe">
+                    <label *ngIf="classe && classe.touched && classe.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid class</label>
+
+                </div>
+
+                <div class="user-input-box">
+                    <label for="section">Section</label>
+                    <input type="text" name="section" id="section" class="form-control" [(ngModel)]="student.section"
+                        placeholder="Enter section" formControlName="section">
+                    <label *ngIf="section && section.touched && section.invalid"
+                        style="color: #FF0000; text-shadow: 2px 2px 8px #FF0000;">Please add valid section</label>
+                </div>
+            </div>
+
+            <div class="form-submit-btn">
+                <input type="submit" value="Submit" [disabled]="addForm.invalid">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+
+
+
+
+<!-- [ngClass]="{'is-invalid': submitted && addForm.controls['userName'].errors}"     [ngClass]="{'is-invalid': submitted && addForm.controls['password'].errors}"    <i class="fas fa-search-dollar"></i>-->
+
+
+
+<!-- [ngClass]="{'is-invalid': submitted && addForm.controls['name'].errors}" -->
+
+
+<!-- <div *ngIf="submitted && addForm.controls['userName'].errors" class="text-danger">
+                <div *ngIf="submitted && addForm.controls['userName'].errors['required']">
+                    username is required
+                </div>
+              </div> -->
+
+
+
+
+<!-- <body>
+    <div class="addBox">
+        <h2>Add New Student</h2>
+        <form [formGroup]="addForm" (ngSubmit)="addStudent()">
+            
+            <div class="fields">
+
+            <input type="text" name="userName" [(ngModel)] = "student.userName" placeholder="username" formControlName="userName">
+            <span style="margin-right: 130px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="userName && userName.invalid && userName.touched">username not valid</span>
+
+            <div class="inputsss">
+                <input type="password" name="password" [(ngModel)]="student.password" placeholder="password"
+                    [type]="hide ? 'password' : 'text'" #message formControlName="password">
+                <button class="btnn" mat-icon-button matSuffix (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" style="color: white; display: flex;">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </div>
+            <span style="margin-right: 130px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="password && password.invalid && password.touched">password not valid</span>
+
+            <input type="text" name="name" [(ngModel)]="student.name" placeholder="name" formControlName="name">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="name && name.invalid && name.touched">name not valid</span>
+
+            <input type="number" name="age" [(ngModel)]="student.age" placeholder="age" formControlName="age">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="age && age.invalid && age.touched">age not valid</span>
+
+            <input type="date" name="birthDate" [(ngModel)]="student.birthDate" placeholder="birthDate" formControlName="birthDate">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="birthDate && birthDate.invalid && birthDate.touched">birthDate not valid</span>
+
+            <select type="text" name="gender" [(ngModel)]="student.gender" placeholder="gender" formControlName="gender" style="color: black;">
+                <option value="">--Select Gender--</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="gender && gender.invalid && gender.touched">gender not valid</span>
+
+            <input type="text" name="address" [(ngModel)]="student.address" placeholder="address" formControlName="address">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="address && address.invalid && address.touched">address not valid</span>
+
+            <input type="text" name="phoneNo" [(ngModel)]="student.phoneNo" placeholder="phoneNo" formControlName="phoneNo">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="phoneNo && phoneNo.invalid && phoneNo.touched">phoneNo not valid</span>
+
+            <input type="text" name="classe" [(ngModel)]="student.classe" placeholder="classe" formControlName="classe">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="classe && classe.invalid && classe.touched">class not valid</span>
+
+            <input type="text" name="section" [(ngModel)]="student.section" placeholder="section" formControlName="section">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="section && section.invalid && section.touched">section not valid</span>
+
+            <input type="text" name="email" [(ngModel)]="student.email" placeholder="email" formControlName="email">
+            <span style="margin-right: 155px; margin-top: 500px; text-shadow: 2px 2px 8px #FF0000;" *ngIf="email && email.invalid && email.touched">email not valid</span>
+            <br>
+
+            <button class="btn btn-success" type="submit" [disabled]="addForm.invalid">Submit</button>
+            </div>
+
+        </form>
+  
+    </div>
+  </body>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="wrapper">
+    <div class="page-header" style="background-image: url('../../../assets/images/1.jpg');">
+         <div class="filter"></div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="text-center" style="font-size:xx-large">Update Details</h1>
+                        </div>
+                        <div class="card-body">
+                            <form>
+        
+                                <div>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Student ID</mat-label>
+                                        <input matInput ngModel type="text" name="id" id="id" placeholder="Enter student id">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Student Name</mat-label>
+                                        <input matInput ngModel type="text" name="fullName" id="fullName" placeholder="Enter student name">
+                                    </mat-form-field>
+                                </div>
+                                <!-- <div>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Student Gender</mat-label>
+                                        <!-- <input matInput ngModel type="text" name="gender" id="gender" placeholder="Enter student gender"> 
+                                        <select matInput>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>NotToSay</option>
+                                        </select>
+                                    </mat-form-field>
+                                </div> 
+        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,87 @@
+<div class="text-center"><h1>All Fees List</h1></div>
+
+<div class="container mt-4 mb-4">
+
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="fees">
+
+            <!-- Position Column -->
+            <!-- <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container> -->
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="studentId">
+                <th mat-header-cell *matHeaderCellDef> StudentId </th>
+                <td mat-cell *matCellDef="let element"> {{element.studentId}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="studentName">
+                <th mat-header-cell *matHeaderCellDef> StudentName </th>
+                <td mat-cell *matCellDef="let element"> {{element.studentName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="feeType">
+                <th mat-header-cell *matHeaderCellDef> FeeType </th>
+                <td mat-cell *matCellDef="let element"> {{element.feeType}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef> Amount </th>
+                <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="paymentType">
+                <th mat-header-cell *matHeaderCellDef> PaymentType </th>
+                <td mat-cell *matCellDef="let element"> {{element.paymentType}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef> Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+        </mat-paginator> -->
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

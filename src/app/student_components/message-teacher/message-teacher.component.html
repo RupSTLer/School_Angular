@@ -1,0 +1,22 @@
+<div class="container w3-blue mat-elevation-z8 mt-5 mb-5" style="padding: 30px; border-radius: 10px; width: 50%;">
+
+    <h1>Send message to Teacher</h1>
+    <form [formGroup]="sendMessageForm" (ngSubmit)="addMsg()">
+        <div class="form-group">
+            <label for="teacher">Select Teacher</label>
+            <select [(ngModel)]="msg.receiverId" formControlName="teacher" id="teacher" class="form-control">
+                <option *ngFor="let teacher of teachers" [value]="teacher.teacherId">
+                    {{teacher.name}}({{teacher.teacherId}})</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Type your message</label>
+            <textarea [(ngModel)]="msg.message" formControlName="message" id="message" class="form-control" [maxlength]="maxChars" placeholder="write your message/query here"></textarea>
+            <p *ngIf="(msg.message?.length || 0) > 60" >Characters Remaining: {{msg.message.length}}/{{maxChars}}</p>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" [disabled]="!sendMessageForm.valid">Send</button>
+    </form>
+</div>
+

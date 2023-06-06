@@ -1,0 +1,32 @@
+.body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #2980b9, #8e44ad) ;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: aliceblue;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    background: blue;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.view h3 {
+    color: red;
+    text-align: center;
+    height: 50px;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
